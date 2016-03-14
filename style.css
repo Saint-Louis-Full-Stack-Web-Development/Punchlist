@@ -1,0 +1,44 @@
+body{
+    margin-top: 30px;
+    font-family: arial, helvetica, sans-serif;
+}
+.complete{
+    text-decoration: line-through;
+    color:gray!important;
+    font-weight: normal!important;
+    font-style: italic;
+}
+.task{
+    font-size: 20pt;
+    padding:5px;
+    min-height: 60px;
+    font-weight: bold;
+    /*width: 400px;*/
+    word-wrap: break-word;
+    border: none;
+
+}
+.newTask{
+    border: none;
+
+    /*width: 400px;*/
+}
+.task:hover{
+    color:red;
+}
+.task button{
+    display: none;
+    margin-left: 5px;
+    height:50px;
+    font-size: 15pt;
+}
+.task:hover button{
+    display:inline-block;
+}
+.task input{
+    font-size: 20pt;
+    height:50px;
+    /*width: 300px!important;*/
+    width: 70%!important;
+    display:inline-block;
+}
