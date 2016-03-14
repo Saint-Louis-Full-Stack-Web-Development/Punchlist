@@ -1,6 +1,6 @@
 # Punchlist
 
-![demo]('readmeAttachments/Punchlist.gif')
+![demo](readmeAttachments/Punchlist.gif)
 
 This is an ultra-basic non-javascript-tooled version of a punchlist using [Vue.js](http://www.vuejs.org) for MVVM.
 
