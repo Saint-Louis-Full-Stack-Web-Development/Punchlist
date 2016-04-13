@@ -8,11 +8,11 @@
     </head>
     <body class="container">
         <ul class="list-group">
-            <li v-for="task in punchlist" class="task list-group-item" :class="{'complete': task.complete}">
+            <li v-show="punchlist.length !== 0" v-for="task in punchlist" class="task list-group-item" :class="{'complete': task.complete}">
                 <span @click="toggleComplete(task)" v-show="!task.editing">{{ task.description }}</span>
-                <button class="btn btn-primary pull-right" @click="toggleEdit(task)" v-show="!task.editing">edit</button>
+                <button class="btn btn-primary pull-right" @click="startEditing(task)" v-show="!task.editing">edit</button>
                 <input type="text" v-model="task.description" v-show="task.editing" class="form-control">
-                <button class="btn btn-success pull-right" @click="toggleEdit(task)" v-show="task.editing">done</button>
+                <button class="btn btn-success pull-right" @click="endEditing(task)" v-show="task.editing">done</button>
             </li>
             <li class="list-group-item newTask">
                 <input type="text" v-on:keyup.13="addTask(newTask)" class="form-control" v-model="newTask" placeholder="Add task...">
